@@ -44,4 +44,12 @@ class CalculatorManagerTest {
         val result = calc.divide(number1, number2).blockingGet()
         assertEquals(result, 2)
     }
+
+    @Test
+    fun whenDividingNumberByZero() {
+/*        val number1 = 9
+        val number2 = 0
+        val testObserver = calc.divide(number1, number2).test().await().assertError(ArithmeticException::class.java)
+        testObserver.assertError(ArithmeticException::class.java)*/
+    }
 }

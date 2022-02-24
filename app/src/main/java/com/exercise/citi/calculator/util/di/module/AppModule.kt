@@ -11,10 +11,7 @@ import javax.inject.Singleton
 
 @InstallIn(SingletonComponent::class)
 @Module(
-    includes = [
-//        NetworkModule::class,
-//        BluetoothModule::class
-    ]
+    includes = []
 )
 object AppModule {
 

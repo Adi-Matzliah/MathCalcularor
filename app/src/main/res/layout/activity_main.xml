@@ -33,9 +33,10 @@
                 android:id="@+id/plusTV"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:paddingStart="10dp"
                 android:textColor="@color/white"
                 android:background="#0058FF"
-                android:text="Plus operation:"
+                android:text="@string/plus_operation_title"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -44,12 +45,10 @@
                 android:id="@+id/input1ET"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
                 android:inputType="number"
                 android:maxLength="6"
                 android:textSize="37sp"
                 app:layout_constraintEnd_toStartOf="@+id/plusIV"
-                app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/plusTV" />
 
@@ -57,11 +56,9 @@
                 android:id="@+id/plusIV"
                 android:layout_width="25dp"
                 android:layout_height="25dp"
-                android:layout_marginStart="20dp"
                 android:src="@drawable/ic_plus"
                 app:layout_constraintBottom_toBottomOf="@+id/input1ET"
                 app:layout_constraintEnd_toStartOf="@+id/input2ET"
-                app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toEndOf="@+id/input1ET"
                 app:layout_constraintTop_toTopOf="@+id/input1ET" />
 
@@ -69,12 +66,10 @@
                 android:id="@+id/input2ET"
                 android:layout_width="47dp"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
                 android:inputType="number"
                 android:maxLength="6"
                 android:textSize="37sp"
                 app:layout_constraintEnd_toStartOf="@+id/equal1IV"
-                app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toEndOf="@+id/plusIV"
                 app:layout_constraintTop_toBottomOf="@+id/plusTV" />
 
@@ -82,11 +77,9 @@
                 android:id="@+id/equal1IV"
                 android:layout_width="25dp"
                 android:layout_height="25dp"
-                android:layout_marginStart="20dp"
                 android:src="@drawable/ic_equal"
                 app:layout_constraintBottom_toBottomOf="@+id/input2ET"
                 app:layout_constraintEnd_toStartOf="@+id/result1TV"
-                app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toEndOf="@+id/input2ET"
                 app:layout_constraintTop_toTopOf="@+id/input2ET" />
 
@@ -94,7 +87,6 @@
                 android:id="@+id/result1TV"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
                 android:text="@{String.valueOf(viewModel.plusResult)}"
                 android:textSize="37sp"
                 app:layout_constraintBottom_toBottomOf="@+id/equal1IV"
@@ -107,9 +99,10 @@
                 android:id="@+id/minusTV"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:paddingStart="10dp"
                 android:textColor="@color/white"
                 android:background="#0058FF"
-                android:text="Minus operation:"
+                android:text="@string/minus_operation_title"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/input2ET" />
@@ -118,7 +111,6 @@
                 android:id="@+id/input3ET"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
                 android:inputType="number"
                 android:maxLength="6"
                 android:textSize="37sp"
@@ -130,7 +122,6 @@
                 android:id="@+id/minusIV"
                 android:layout_width="25dp"
                 android:layout_height="25dp"
-                android:layout_marginStart="20dp"
                 android:src="@drawable/ic_minus"
                 app:layout_constraintBottom_toBottomOf="@+id/input3ET"
                 app:layout_constraintEnd_toStartOf="@+id/input4ET"
@@ -145,7 +136,6 @@
                 android:maxLength="6"
                 android:textSize="37sp"
                 app:layout_constraintEnd_toStartOf="@+id/equal2IV"
-                app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toEndOf="@+id/minusIV"
                 app:layout_constraintTop_toBottomOf="@+id/minusTV" />
 
@@ -155,7 +145,7 @@
                 android:layout_height="25dp"
                 android:src="@drawable/ic_equal"
                 app:layout_constraintBottom_toBottomOf="@+id/input4ET"
-                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/result2TV"
                 app:layout_constraintStart_toEndOf="@+id/input4ET"
                 app:layout_constraintTop_toTopOf="@+id/input4ET" />
 
@@ -175,9 +165,10 @@
                 android:id="@+id/multiplicationTV"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:paddingStart="10dp"
                 android:textColor="@color/white"
                 android:background="#0058FF"
-                android:text="Multiplication operation:"
+                android:text="@string/multiplication_operation_title"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/input4ET" />
@@ -186,7 +177,6 @@
                 android:id="@+id/input5ET"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
                 android:inputType="number"
                 android:maxLength="6"
                 android:textSize="37sp"
@@ -198,7 +188,6 @@
                 android:id="@+id/multiplicationIV"
                 android:layout_width="25dp"
                 android:layout_height="25dp"
-                android:layout_marginStart="20dp"
                 android:src="@drawable/ic_multiplication"
                 app:layout_constraintBottom_toBottomOf="@+id/input5ET"
                 app:layout_constraintEnd_toStartOf="@+id/input6ET"
@@ -213,7 +202,6 @@
                 android:maxLength="6"
                 android:textSize="37sp"
                 app:layout_constraintEnd_toStartOf="@+id/equal3IV"
-                app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toEndOf="@+id/multiplicationIV"
                 app:layout_constraintTop_toBottomOf="@+id/multiplicationTV" />
 
@@ -223,7 +211,7 @@
                 android:layout_height="25dp"
                 android:src="@drawable/ic_equal"
                 app:layout_constraintBottom_toBottomOf="@+id/input6ET"
-                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/result3TV"
                 app:layout_constraintStart_toEndOf="@+id/input6ET"
                 app:layout_constraintTop_toTopOf="@+id/input6ET" />
 
@@ -243,9 +231,10 @@
                 android:id="@+id/divisionTV"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:paddingStart="10dp"
                 android:textColor="@color/white"
                 android:background="#0058FF"
-                android:text="Division operation:"
+                android:text="@string/division_operation_title"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/input6ET" />
@@ -254,7 +243,6 @@
                 android:id="@+id/input7ET"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
                 android:inputType="number"
                 android:maxLength="6"
                 android:textSize="37sp"
@@ -266,7 +254,6 @@
                 android:id="@+id/divisionIV"
                 android:layout_width="25dp"
                 android:layout_height="25dp"
-                android:layout_marginStart="20dp"
                 android:src="@drawable/ic_division"
                 app:layout_constraintBottom_toBottomOf="@+id/input7ET"
                 app:layout_constraintEnd_toStartOf="@+id/input8ET"
@@ -281,7 +268,6 @@
                 android:maxLength="6"
                 android:textSize="37sp"
                 app:layout_constraintEnd_toStartOf="@+id/equal4IV"
-                app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toEndOf="@+id/divisionIV"
                 app:layout_constraintTop_toBottomOf="@+id/divisionTV" />
 
@@ -291,7 +277,7 @@
                 android:layout_height="25dp"
                 android:src="@drawable/ic_equal"
                 app:layout_constraintBottom_toBottomOf="@+id/input8ET"
-                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/result4TV"
                 app:layout_constraintStart_toEndOf="@+id/input8ET"
                 app:layout_constraintTop_toTopOf="@+id/input8ET" />
 

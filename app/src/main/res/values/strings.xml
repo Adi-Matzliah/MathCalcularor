@@ -1,3 +1,7 @@
 <resources>
-    <string name="app_name">Citis Calculator</string>
+    <string name="app_name">Citi\'s Calculator</string>
+    <string name="plus_operation_title">Plus operation:</string>
+    <string name="minus_operation_title">Minus operation:</string>
+    <string name="multiplication_operation_title">Multiplication operation:</string>
+    <string name="division_operation_title">Division operation:</string>
 </resources>

@@ -65,11 +65,17 @@ class MainViewModel @Inject constructor(
             }
 
             is MathOperation.Division -> {
-                disposable = calculatorManager.divide(number1, number2)
-                    .subscribe { result ->
-                        Timber.d("$number1 / $number2  = $result")
-                         _divisionResult.postValue(result)
-                    }
+                if (number2 == 0) {
+                    Timber.e("Dividing a number by 0 is undefined - set 0 as result")
+                    _divisionResult.value = 0
+                }
+                else {
+                    disposable = calculatorManager.divide(number1, number2)
+                        .subscribe { result ->
+                            Timber.d("$number1 / $number2  = $result")
+                            _divisionResult.postValue(result)
+                        }
+                }
             }
         }
         compositeDisposables.add(disposable)

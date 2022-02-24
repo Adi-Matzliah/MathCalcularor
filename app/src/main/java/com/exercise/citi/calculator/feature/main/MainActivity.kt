@@ -103,14 +103,12 @@ class MainActivity : AppCompatActivity() {
                 .map { c -> c.toString().trim() }
                 .observeOn(AndroidSchedulers.mainThread())
         ) { input1, input2 ->
-            if (input2.isNotEmpty()) {
                 mainViewModel.calculate(
                     MathOperation.Division(
                         if (input1.isNotEmpty()) input1.toInt() else 0,
-                        input2.toInt()
+                        if (input2.isNotEmpty()) input2.toInt() else 0
                     )
                 )
-            }
         }
             .subscribe { Timber.i("Observe division operation") }
         )
